@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+:root {
+  --color-background: #f2f2f2;
+  --purple-100: hsl(254, 88%, 90%);
+  --purple-500: hsl(256, 67%, 59%);
+  --yellow-100: hsl(31, 66%, 93%);
+  --yellow-500: hsl(39, 100%, 71%);
+  --black: hsl(0, 0%, 7%);
+  --white: hsl(0, 0%, 100%);
+  --font-size-small: 0.8rem;
+  --font-size-normal: 1.1rem;
+  --font-size-medium: 2rem;
+  --font-size-large: 3.4rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--font-size-normal);
+  font-family: "DM Sans", sans-serif;
+  background-color: var(--color-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 2rem;
+  line-height: 0.9;
+  letter-spacing: -2px;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: 55%;
+  height: 50rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 1.5rem;
+  grid-auto-flow: row;
+  border: none;
+  grid-template-areas:
+    "one three three eight"
+    "one three three eight"
+    "one four five eight"
+    "two four five eight"
+    "two six seven seven"
+    "two six seven seven";
+  padding: 0;
+}
+
+div {
+  border-radius: 8px;
+  padding-inline: 1.3rem;
+  display: flex;
+}
+
+.one {
+  grid-area: one;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  background-color: var(--yellow-100);
+}
+
+.paragraph {
+  font-weight: 500;
+  font-size: 2rem;
+  max-width: 80%;
+}
+
+.one span {
+  color: var(--purple-500);
+  font-style: italic;
+}
+
+.two {
+  grid-area: two;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: var(--yellow-500);
+}
+
+.three {
+  grid-area: three;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--purple-500);
+}
+
+.three p {
+  font-size: var(--font-size-large);
+  color: var(--white);
+  letter-spacing: normal;
+  text-align: center;
+  max-width: 80%;
+}
+
+.three span:first-of-type {
+  color: var(--yellow-500);
+}
+
+.three span:last-of-type {
+  font-style: italic;
+}
+
+.three img {
+  width: 150px;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.three p:last-of-type {
+  font-size: var(--font-size-small);
+  letter-spacing: normal;
+  font-weight: 500;
+  color: var(--purple-100);
+}
+
+.four {
+  grid-area: four;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--white);
+  padding-right: 0;
+  gap: 1rem;
+}
+
+.four p {
+  font-size: 1.6rem;
+  width: 70%;
+}
+
+.five {
+  grid-area: five;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 2.5rem;
+  background-color: var(--yellow-500);
+  overflow: hidden;
+}
+
+.five p {
+  font-size: 1.6rem;
+  width: 70%;
+}
+
+.six {
+  grid-area: six;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: var(--white);
+}
+
+.six p:first-of-type {
+  font-weight: 500;
+  font-size: var(--font-size-large);
+  letter-spacing: normal;
+}
+
+.six p:last-of-type {
+  letter-spacing: normal;
+}
+
+.six img {
+  width: 170px;
+}
+
+.seven {
+  grid-area: seven;
+  padding-block: 1.5rem;
+  align-items: center;
+  background-color: var(--purple-500);
+}
+
+.seven p {
+  color: var(--white);
+  max-width: 50%;
+}
+
+.eight {
+  grid-area: eight;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 0;
+  background-color: var(--purple-100);
+  overflow: hidden;
+}
+
+.eight p:first-of-type {
+  font-size: 1.6rem;
+  width: 70%;
+  font-weight: 500;
+}
+
+.eight img {
+  max-width: none;
+  width: 250px;
+  height: 250px;
+  margin-block: 1.5rem;
+  aspect-ratio: 3/2;
+  position: relative;
+}
+
+.eight p:last-of-type {
+  letter-spacing: normal;
+  line-height: normal;
+  max-width: 80%;
+}
+
+.attribution {
+  letter-spacing: normal;
+}
