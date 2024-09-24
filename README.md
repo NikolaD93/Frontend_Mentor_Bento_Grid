@@ -1,6 +1,6 @@
 # Frontend Mentor - Bento grid
 
-![Design preview for the Bento grid coding challenge](./preview.jpg)
+![bento_preview](https://github.com/user-attachments/assets/ff08d68c-0594-4103-b35a-ff6bb4b87e37)
 
 ## Welcome! 👋
 
